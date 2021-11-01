@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="vue-app">
+        <h1>Looping Through lists</h1>
+        <!-- {{characters[0]}} {{characters[1]}} {{characters[2]}} -->
+        <ul>
+            <li v-for='character in characters'>
+                {{character}}
+            </li>
+        </ul>
+        <ul>
+            <li v-for='(ninja,index) in ninjas'>
+                {{ index+1}}. {{ninja.name}} - {{ninja.age}}
+            </li>
+        </ul>
+        <ul>
+            <li v-for='char in name'>
+                {{char}}
+            </li>
+        </ul>
+
+        <ul>
+            <template v-for="(ninja,index) in ninjas">
+                <li >
+                    {{ index+1}}. {{ninja.name}} - {{ninja.age}}
+                </li>
+            </template>
+        </ul>
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
